@@ -1,0 +1,190 @@
+@import '../_var'
+
+.banner
+    &.project-banner
+        z-index: 2
+        .bg
+            height: 100vh
+            @include media(540) 
+                height: 60vh
+        .banner-wrapper
+            .heading
+                text-align: center
+                h2
+                    font-size: 68px
+                    line-height: 1
+                    margin-bottom: 20px
+                    color: #fff
+                    font-family: $ttrg-bd
+                    @include media(991)
+                        font-size: 55px
+                    @include media(768)
+                        font-size: 40px
+                    @include media(540)
+                        font-size: 30px
+                p
+                    max-width: 550px
+                    font-size: 24px
+                    line-height: 1.2
+                    font-family: $ttrg-bd
+                    color: $white
+                    margin: 0 auto
+                    @include media(768)
+                        font-size: 22px
+                    @include media(540)
+                        font-size: 16px
+        .filter-strip
+            width: 600px
+            box-shadow: 0 3px 8px 0 #0000003D
+            position: absolute
+            border-radius: 50px
+            left: 50%
+            bottom: -3%
+            transform: translate(-50%, 3%)
+            @include media(768)
+                width: 100%
+            @include media(540)
+                box-shadow: none
+            .filters
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #fff
+                border-radius: 50px
+                padding: 0 10px
+                @include media(540)
+                    flex-direction: column
+                    border-radius: 0
+                label
+                    display: none
+                .css-b62m3t-container
+                    border-right: 1px solid #00000033
+                    flex: 1
+                    @include media(540)
+                        border-right: none
+                        width: 100%
+                        border-bottom: 1px solid #ccc
+                    .css-ca35yf-menu
+                        @include media(540)
+                            width: 100%
+                    .css-13cymwt-control
+                        padding-right: 15px
+                        border: none
+                    .css-1u9des2-indicatorSeparator
+                        display: none
+                    // .css-1xc3v61-indicatorContainer
+                    //     padding: 0
+                    // .css-15lsz6c-indicatorContainer
+                    //     padding: 0
+                    &:first-child
+                        .css-13cymwt-control
+                            border-radius: 50px 0 0 50px
+                            .css-hlgwow
+                                padding-left: 15px
+                .search-input
+                    flex: 1
+                    height: 100%
+                    padding: 0 6px 0 15px
+                    display: flex
+                    align-items: center
+                    @include media(540)
+                        width: 100%
+                        border-bottom: 1px solid #ccc
+                    input
+                        height: 45px
+                        outline: none
+                        border: none
+                        @include media(540)
+                            flex: 0 1 80%
+                    button
+                        padding: 6px 15px
+                        color: $white
+                        background: var(--gradient-a)
+                        border-radius: 50px
+
+.projects-secA
+    .listing-grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 30px 20px
+        padding: 60px 0 80px
+        @include media(991)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px 10px
+            padding: 50px 0 60px
+        @include media(768)
+            padding: 30px 0 50px
+        @include media(540)
+            padding: 10px 0 40px
+            grid-template-columns: repeat(1, 1fr)
+    .loadBtn
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+        gap: 7px
+        font-family: $ttrg-bd
+        padding: 10px 15px
+        border-radius: 50px
+        border: 1px solid $black
+        transition: .5s ease
+        &:hover
+            background: var(--gradient-a)
+            color: $white
+            border: none
+        img
+            width: 20px
+
+.sector-container
+        width: 100%
+        padding: 70px 0 20px
+        display: flex
+        gap: 70px
+        .tab-nav
+            flex-direction: column
+            align-items: center
+            flex: 0 1 20%
+            gap: 10px
+            li
+                display: block
+                width: 100%
+                padding: 40px 10px 15px 20px
+                border-radius: 10px
+                border: 1px solid $black
+                transition: .5s ease
+                color: $black
+                &:hover, &.active
+                    background: var(--gradient-a)
+                    color: $white
+                    border: none
+        .tab-nav-content
+            .tabs
+                display: flex
+                gap: 50px
+                transition: 1s ease
+                figure
+                    img
+                        filter: grayscale(1)
+                figcaption
+                    padding-top: 10px
+                    h3
+                        font-size: 48px
+                        padding-bottom: 20px
+                    ul
+                        padding-left: 25px
+                        li
+                            position: relative
+                            padding-bottom: 5px
+                            color: $text
+                            &::before
+                                content: ""
+                                position: absolute
+                                left: -20px
+                                bottom: 12px
+                                width: 10px
+                                height: 10px
+                                background-color: var(--primary)
+                                border-radius: 50%
+                    .btn
+                        margin-top: 20px

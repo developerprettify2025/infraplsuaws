@@ -1,0 +1,150 @@
+{
+  "Index": {
+      "service": {
+          "heading": "Our Services",
+          "description": "Consulting services from the stage of conceptualization to planning, design and detailed engineering"
+      },
+      "sector": {
+          "heading": "Paving Pathways, Connecting Destinations",
+          "description": "Our core competencies are in the domains of Integrated Infrastructure, Industrial Parks/ SEZ, Water & Sanitation, Water resources, Transportation, Energy, Buildings and Environmental Sectors."
+      },
+      "project": {
+          "heading": "Projects",
+          "description": "Team Infraplus has global experience of working in more than 30 countries in Africa, Middle East and Southeast Asia. Infraplus is presently executing projects in India, Nigeria, Senegal, The Gambia, Democratic Republic of Congo and Oman and constantly expanding its global foot- prints."
+      },
+      "client": {
+          "heading": "Our Clients",
+          "description": "Empowering Partnerships, Driving Success"
+      },
+      "about": {
+          "heading": "About Infraplus",
+          "description": "<strong>Infraplus Consulting Pvt. Ltd.</strong> is a leading infrastructure consulting firm specializing in providing innovative, sustainable, and efficient engineering solutions. With a foundation built on experience and expertise, we have been delivering quality consultancy services across the globe, shaping the future of infrastructure with precision, dedication, and responsibility.",
+          "aboutDescription": "Founded in 2016, Infraplus Consulting is an ISO 9001:2015 certified company based in India. We specialize in designing, planning, and managing projects across various sectors, including transportation, logistics, roads &amp; highways, water &amp; wastewater management, energy, industrial development, and urban planning. Our team of highly skilled professionals works in close partnership with clients, stakeholders, and contractors to ensure successful project execution, delivered on time and within budget.",
+          "Countries": "20+ Countries",
+          "CountriesTagline": "Concept to Commissioning Services",
+          "Project": "300+",
+          "ProjectTagline": "Projects Delivered",
+          "Client": "100+",
+          "ClientTagline": "Clients"
+      },
+      "whyChoose": {
+          "heading": "Why Choose us",
+          "description": "Empowering Partnerships, Driving Success",
+          "items": [
+            {
+              "heading": "Proven Global Expertise",
+              "description": "Infraplus Consulting has successfully delivered mission-critical infrastructure projects across Africa, Asia, and the Middle East, working closely with governments, development banks, and leading private sector companies. Our projects span over 30 countries, and our expertise is trusted by both international clients and global institutions."
+            },
+            {
+              "heading": "End-to-End Infrastructure Solutions",
+              "description": "At Infraplus, we don’t just consult — we co-create, plan, engineer, and implement turnkey solutions. We handle projects across a variety of sectors including Water, Energy, Transportation, and Urban Development, ensuring that every project is integrated seamlessly from start to finish."
+            },
+            {
+              "heading": "Data-Driven & Impact-Focused",
+              "description": "Our work’s success is measured by the real-world outcomes we achieve. From improving water access, building efficient transport systems, to expanding green energy solutions, we track and optimize the impact of every project we deliver."
+            },
+            {
+              "heading": "Sustainability-First Thinking",
+              "description": "We view every project through the lens of environmental resilience and sustainability, ensuring that our work has a lasting, positive impact on the planet."
+            }
+          ]          
+      },
+      "career": {
+          "heading": "Join our team",
+          "description": "Join the Journey, Shape the Future"
+      },
+      "contactus": {
+          "heading": "let’s Collaborate",
+          "description": "Bringing Ideas Together, Building Success"
+      }
+  },
+  "AboutUs": {
+    "Services": [
+      {
+        "content": "<strong>Feasibility Studies:</strong> We conduct in-depth studies and market assessments to ensure the viability of projects, identifying potential risks, benefits, and solutions."
+      },
+      {
+        "content": "<strong>Design and Engineering:</strong> From preliminary design to detailed engineering, we provide comprehensive design services that ensure quality, safety, and cost- effectiveness."
+      },
+      {
+        "content": "<strong>Project Management:</strong> Infraplus oversees every phase of the project, from planning to completion, ensuring that all objectives are met while maintaining timelines and budgets."
+      },
+      {
+        "content": "<strong>Consulting & Advisory:</strong> Offering strategic guidance to clients, we support decision- making with sound technical advice and deep industry insights."
+      },
+      {
+        "content": "<strong>Sustainability Integration:</strong> We are committed to sustainable development, incorporating green practices and energy-efficient solutions in every aspect of our work."
+      }
+    ]
+  },
+  "ContactUs": {
+    "form": {
+          "heading": "Transforming Infrastructure Powering Possibilities",
+          "description": "Please fill out the form below and we'll get back to you as soon as we can."
+      }
+  },
+  "Career": {
+    "Why": {
+          "heading": "Why Join Us",
+          "description": "At infraplus consulting, we’re more than just a team — we’re a movement of over 100+ visionaries driving innovation, collaboration, and impactful change. Here's why you should be part of our journey",
+          "items": [
+            {
+              "heading": "Innovative Environment",
+              "description": "We thrive on fresh ideas and bold thinking. Join us to push boundaries, challenge norms, and create solutions that matter.",
+              "image": "/assets/icon/bulb.svg"
+            },
+            {
+              "heading": "Collaborative Culture",
+              "description": "Our strength lies in teamwork. You'll work alongside passionate professionals who inspire and empower each other every day.",
+              "image": "/assets/icon/thumbsup.svg"
+            },
+            {
+              "heading": "Growth Opportunities",
+              "description": "From mentorship programs to leadership roles, we invest in your development to help you reach your full potential.",
+              "image": "/assets/icon/growth.svg"
+            },
+            {
+              "heading": "Vision-Driven Leadership",
+              "description": "Be part of a company that values forward-thinking ideas and empowers individuals to turn concepts into reality.",
+              "image": "/assets/icon/vision.svg"
+            }
+          ]
+      },
+      "Culture": {
+        "heading": "Our Culture",
+        "items": [
+            {
+              "image": "/assets/images/careers/culture.jpg"
+            },
+            {
+              "image": "/assets/images/careers/culture.jpg"
+            },
+            {
+              "image": "/assets/images/careers/culture.jpg"
+            },
+            {
+              "image": "/assets/images/careers/culture.jpg"
+            },
+            {
+              "image": "/assets/images/careers/culture.jpg"
+            }
+        ]
+      },
+      "Formdata": {
+        "headingOne": "Current Openings",
+        "headingTwo": "Interested in joining us?",
+        "description": "Submit your CV, we will contact you as soon as we have relevant openings"
+      }
+  },
+  "ServicePage": {
+    "Section": {
+          "description": "Infraplus provides consulting services from the stage of conceptualization to planning, design and detailed engineering of diverse discipline projects. Focusing on the need of clients, Infraplus has expanded its activities in diversified fields to develop areas of complementary expertise and strengthen firm’s capabilities."
+      }
+  },
+  "PrivacyPolicy": {
+    "data": {
+        "heading": "Privacy Policy",
+        "description": "<h3>Introduction</h3> <p>When you interact with Infraplus Consulting, we may collect the following types of personal information:</p> <ul> <li><b>Contact Information:</b> Name, email address, phone number, and mailing address.</li> <li><b>Demographic Information:</b> Age, gender, and other demographic details.</li> <li><b>Communication Information:</b> Messages, feedback, and inquiries.</li> </ul> <h4>Non-Personal Information</h4> <p>We also collect non-personal information that does not directly identify you, such as:</p> <ul> <li><b>Usage Data:</b> Information about how you use our website, including the pages you visit, the time spent on those pages, and other similar information.</li> <li><b>Device Information:</b> Information about your device, including IP address, browser type, and operating system.</li> </ul> <h3>How We Use Your Information</h3> <p>Infraplus Consulting uses the collected information for various purposes, including:</p> <ul> <li>To provide, operate, and maintain our services.</li> <li>To process and manage donations and volunteering applications.</li> <li>To communicate with you, including responding to your inquiries and sending updates.</li> <li>To improve our website, services, and user experience.</li> <li>To comply with legal obligations and enforce our terms and policies.</li> </ul> <h3>Sharing Your Information</h3> <p>We may share your information in the following situations:</p> <ul> <li><b>With Service Providers:</b> We may share your information with third-party service providers who perform services on our behalf, such as payment processing and email delivery.</li> <li><b>For Legal Reasons:</b> We may disclose your information if required by law or in response to valid requests by public authorities.</li> <li><b>With Your Consent:</b> We may share your information with other parties if you have given us explicit permission to do so.</li> </ul> <h3>Security of Your Information</h3> <p>We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p> <h3>Your Privacy Rights</h3> <p>Depending on your location, you may have certain rights regarding your personal information, including:</p> <ul> <li>The right to access, update, or delete your personal information.</li> <li>The right to object to or restrict the processing of your personal information.</li> <li>The right to withdraw consent at any time, where applicable.</li> </ul> <h3>Changes to This Privacy Policy</h3> <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting the new policy on our website and updating the effective date at the top of this policy.</p>"
+      }
+  }
+}

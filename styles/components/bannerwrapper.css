@@ -1,0 +1,213 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.banner .bg {
+  height: 100vh;
+}
+.banner .banner-wrapper .heading.center {
+  text-align: center;
+}
+.banner .banner-wrapper .heading.center p {
+  margin: 0 auto;
+}
+.banner .banner-wrapper .heading.left {
+  text-align: left;
+}
+.banner .banner-wrapper .heading.left p {
+  margin-right: auto;
+}
+.banner .banner-wrapper .heading.right {
+  text-align: right;
+}
+.banner .banner-wrapper .heading.right p {
+  margin-left: auto;
+}
+.banner .banner-wrapper .heading h2 {
+  font-size: 68px;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: "ttrg-bd";
+}
+.banner .banner-wrapper .heading p {
+  max-width: 550px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: "ttrg-bd";
+  color: var(--white);
+}
+@media only screen and (max-width: 540px) {
+  .banner .banner-wrapper .heading p {
+    font-family: "ttrg";
+  }
+}
+
+.banner.contact-banner::before {
+  z-index: 1;
+}
+@media only screen and (max-width: 540px) {
+  .banner.contact-banner .bg {
+    height: 60vh;
+  }
+}
+.banner.contact-banner .bg video {
+  transform: scaleX(-1);
+  filter: grayscale(1);
+}
+@media only screen and (max-width: 991px) {
+  .banner.contact-banner .bg .banner-wrapper .heading h2 {
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .banner.contact-banner .bg .banner-wrapper .heading h2 {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .banner.contact-banner .bg .banner-wrapper .heading h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .banner.contact-banner .bg .banner-wrapper .heading p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .aboutus-banner .bg {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .aboutus-banner .bg .banner-wrapper .heading {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .aboutus-banner .bg .banner-wrapper .heading h2 {
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .aboutus-banner .bg .banner-wrapper .heading h2 {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .aboutus-banner .bg .banner-wrapper .heading h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .aboutus-banner .bg .banner-wrapper .heading p {
+    font-size: 16px;
+    font-family: "ttrg";
+  }
+}
+
+.banner.blog-details-banner .heading h2 {
+  font-size: 16px;
+}
+.banner.blog-details-banner .heading p {
+  font-size: 35px;
+}
+
+@media only screen and (max-width: 540px) {
+  .services-banner .bg {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .services-banner .bg .banner-wrapper .heading {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .services-banner .bg .banner-wrapper .heading h2 {
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services-banner .bg .banner-wrapper .heading h2 {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .services-banner .bg .banner-wrapper .heading h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .services-banner .bg .banner-wrapper .heading p {
+    font-size: 16px;
+    font-family: "ttrg";
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .blog-details-banner .bg {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .blog-details-banner .bg .banner-wrapper .heading {
+    text-align: center;
+  }
+}
+.blog-details-banner .bg .banner-wrapper .heading p {
+  font-family: "ttrg-bd";
+}
+@media only screen and (max-width: 768px) {
+  .blog-details-banner .bg .banner-wrapper .heading p {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .blog-details-banner .bg .banner-wrapper .heading p {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .career-banner .bg {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-banner .bg .banner-wrapper .heading {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .career-banner .bg .banner-wrapper .heading h2 {
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .career-banner .bg .banner-wrapper .heading h2 {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-banner .bg .banner-wrapper .heading h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-banner .bg .banner-wrapper .heading p {
+    font-size: 16px;
+    font-family: "ttrg";
+  }
+}/*# sourceMappingURL=bannerwrapper.css.map */

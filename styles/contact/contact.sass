@@ -1,0 +1,117 @@
+@import '../_var'
+    
+.contact-secA
+    .flex
+        @include media(991) 
+            align-items: center
+        @include media(768) 
+            flex-direction: column
+            gap: 10px
+        .colA, .colB
+            flex: 1
+        .colA
+            .video-icon
+                mask-image: url(/assets/images/home/about-vector.svg)
+                mask-size: 70%
+                mask-repeat: no-repeat
+                aspect-ratio: 0.9876
+                line-height: 0
+                @include media(991) 
+                    mask-size: 80%
+                @include media(768) 
+                    mask-size: 90%
+                    height: 300px
+                @include media(540) 
+                    mask-size: 100%
+                    height: 90px
+                video
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+        .colB
+            h3
+                text-align: center
+                font-size: 24px
+                line-height: 1.2
+                @include media(540)     
+                    font-size: 22px
+            .contact-grid
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                grid-gap: 20px 10px
+                padding-top: 30px
+                @include media(540) 
+                    grid-template-columns: repeat(1, 1fr)
+                    padding-top: 20px
+                .contact-col
+                    background-color: $white
+                    padding: 30px 20px
+                    text-align: center
+                    border: 1px solid #D1D0D0
+                    border-radius: 15px
+                    @include media(540)     
+                        padding: 20px 15px
+                    .icon
+                        padding-bottom: 10px
+                        img
+                            width: 44px
+                    h6
+                        font-size: 18px
+                        line-height: 1.2
+                        font-family: $ttrg-bd
+                        padding-bottom: 10px
+                    a
+                        display: block
+                        color: $text
+                        transition: .5s ease
+                        &.whatsappBtn
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            gap: 5px
+                            background: var(--gradient-a)
+                            -webkit-text-fill-color: transparent 
+                            -webkit-background-clip: text
+                            font-family: $ttrg-bd
+                            margin-top: 5px
+                        &:hover
+                            color: $black
+                        img
+                            width: 30px
+
+.contact-secB 
+    background: var(--gradient-a)
+    .heading
+        max-width: 580px
+        margin: 0 auto
+        h3
+            font-size: 36px
+            color: $white
+            @include media(540)     
+                font-size: 22px
+                line-height: 1.2
+        p
+            color: $white
+    .form-container
+        padding-top: 50px
+        max-width: 600px
+        margin: 0 auto
+        @include media(540)     
+            padding-top: 30px
+        .contact-form
+            --labelbefore: var(--white)
+            --labelafter: var(--white)
+            --borderbefore: var(--white)
+            --borderafter: var(--white)
+            --color: var(--white)
+            .btn-wrap
+                text-align: center
+                .btn
+                    width: fit-content
+
+.contact-secC
+    line-height: 0
+    iframe
+        filter: grayscale(1)
+        @include media(540)     
+            height: 400px

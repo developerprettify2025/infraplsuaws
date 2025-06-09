@@ -1,0 +1,120 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.summery-detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.summery-detail-content .col {
+  --padlr: 0;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  margin-bottom: 10px;
+}
+.summery-detail-content .col.active .title h6 {
+  color: var(--primary);
+}
+.summery-detail-content .col.active .title .ico {
+  rotate: -90deg;
+}
+.summery-detail-content .col.active article {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  opacity: 1;
+}
+.summery-detail-content .col .title {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border: 1px solid #ccc;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.summery-detail-content .col .title h6 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  flex: 1;
+  color: var(--text);
+  font-family: "ttrg-bd";
+  padding-right: 1rem;
+  transition: 0.5s ease;
+}
+@media only screen and (max-width: 540px) {
+  .summery-detail-content .col .title h6 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 345px) {
+  .summery-detail-content .col .title h6 {
+    font-size: 14px;
+  }
+}
+.summery-detail-content .col .title .ico {
+  flex: 0 1 auto;
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/icon/down-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 50%;
+  transition: 0.5s ease;
+}
+.summery-detail-content .col article {
+  position: relative;
+  background: var(--white);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  border-radius: 0 0 5px 5px;
+}
+.summery-detail-content .col article .content-desc {
+  padding: 15px 20px 20px;
+  border-bottom: 1px solid #D1D1D1;
+}
+.summery-detail-content .col article .content-desc p, .summery-detail-content .col article .content-desc ul, .summery-detail-content .col article .content-desc h2, .summery-detail-content .col article .content-desc h3, .summery-detail-content .col article .content-desc h4, .summery-detail-content .col article .content-desc h5, .summery-detail-content .col article .content-desc h6 {
+  margin-bottom: 16px;
+}
+.summery-detail-content .col article .content-desc * {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.summery-detail-content .col article .content-desc h1, .summery-detail-content .col article .content-desc h2, .summery-detail-content .col article .content-desc h3, .summery-detail-content .col article .content-desc h4, .summery-detail-content .col article .content-desc h5, .summery-detail-content .col article .content-desc h6, .summery-detail-content .col article .content-desc b {
+  color: var(--black);
+  font-weight: 500;
+}
+.summery-detail-content .col article .content-desc ul {
+  padding-left: 20px;
+}
+.summery-detail-content .col article .content-desc ul li {
+  list-style: none;
+}
+@media only screen and (max-width: 540px) {
+  .summery-detail-content .col article .content-desc ul li {
+    font-size: 14px;
+  }
+}
+.summery-detail-content .col article .content-desc ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 540px) {
+  .summery-detail-content .col article .content-desc p {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=faqs.css.map */

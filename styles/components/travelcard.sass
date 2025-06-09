@@ -1,0 +1,123 @@
+@import '../_var'
+
+.service-slider
+    width: 100%
+    height: 100%
+    position: relative
+    .swiper
+        width: 100%
+        height: 100%
+        border-radius: 15px
+    .swiper-nav
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 15px    
+        position: absolute
+        top: 8%
+        right: 4%
+        z-index: 2
+        @include media(768)
+            gap: 10px
+        button
+            background: $white
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            border: 1px solid $black
+            @include media(768)
+                width: 30px
+                height: 30px
+            &.swiper-button-disabled
+                opacity: 0.4 
+                cursor: no-drop
+            svg
+                vertical-align: middle
+    .main-card
+        width: 100%
+        height: 100%
+        padding: 10px 30px 30px
+        background: transparent 
+        border-right: 1px solid #ffffffa8
+        cursor: pointer 
+        display: flex 
+        align-items: end
+        overflow: hidden
+        position: relative
+        transition: background-image 0.5s ease-in-out, background-color 0.3s ease-in-out 
+        background-size: cover
+        background-position: center
+        @include before(linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.95) 100%))
+        &::after
+            content: ''
+            position: absolute
+            inset: 0
+            background-image: var(--bg-url)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            transition: opacity 0.4s ease
+            z-index: -1
+            opacity: 1
+        &.hide_bg
+            &::after
+                opacity: 0
+        @include media(991) 
+            padding: 10px 15px 30px
+        @include media(540)
+            border-right: 0
+        &:hover
+            .content
+                transform: translateY(0)
+                h2
+                    &::before
+                        opacity: 1
+        .content
+            transition: 1s ease
+            transform: translateY(86%)
+            @include media(991) 
+                transform: translateY(88%)
+            @include media(540)
+                transform: translateY(0%)
+            h2
+                font-size: 30px
+                line-height: 1.2
+                padding-bottom: 10px
+                color: $white
+                position: relative
+                transition: .5s ease
+                @include media(991) 
+                    font-size: 23px
+                @include media(540)
+                    padding-bottom: 0
+                &::before
+                    content: ""
+                    width: 62px
+                    height: 4px
+                    background-color: var(--primary)
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    opacity: 0
+                    transition: .5s ease
+            ul
+                padding: 20px 0 20px 25px
+                max-height: 200px
+                overflow: hidden
+                @include media(991) 
+                    max-height: 195px
+                @include media(540)
+                    padding: 15px 0 15px 25px
+                li
+                    position: relative
+                    padding-bottom: 5px
+                    color: $white
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: -20px
+                        bottom: 12px
+                        width: 10px
+                        height: 10px
+                        background-color: var(--primary)
+                        border-radius: 50%

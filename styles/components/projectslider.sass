@@ -1,0 +1,83 @@
+@import '../_var'
+
+.project-slider
+    margin-top: 40px
+    .swiper-nav
+        display: flex
+        align-items: center
+        justify-content: end
+        gap: 10px
+        position: absolute
+        right: 3%
+        top: 10%
+        @include media(991) 
+            top: 0
+        @include media(540)
+            display: none
+        button
+            background: $white
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            border: 1px solid $black
+            @include media(768) 
+                width: 30px
+                height: 30px
+            &.swiper-button-disabled
+                opacity: 0.4 
+                cursor: no-drop
+            svg
+                vertical-align: middle
+    .swiper-slide
+        .item-md
+            border-radius: 15px
+            height: 100%
+            &:hover
+                figure
+                    img
+                        transform: scale(1.2)
+            &::before
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.95) 100%)
+                border-radius: 15px
+            figure
+                border-radius: 15px
+                overflow: hidden
+                @include media(540) 
+                    height: 250px
+                img
+                    border-radius: 15px
+                    transition: .5s ease
+            figcaption
+                padding: 0 20px 30px
+                max-width: 490px
+                h6
+                    font-size: 18px
+                    line-height: 1.2
+                    color: $white
+                    font-family: $ttrg-bd
+                    @include media(540) 
+                        font-size: 16px 
+
+.related-slider
+    margin-top: 40px
+    .swiper-nav
+        display: flex
+        align-items: center
+        justify-content: end
+        gap: 10px
+        position: absolute
+        right: 3%
+        top: 3%
+        @include media(540)
+            display: none
+        button
+            background: $white
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            border: 1px solid $black
+            &.swiper-button-disabled
+                opacity: 0.4 
+                cursor: no-drop
+            svg
+                vertical-align: middle

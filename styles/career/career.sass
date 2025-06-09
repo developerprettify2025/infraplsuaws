@@ -1,0 +1,202 @@
+@import '../_var'
+
+.career-secA
+    @include media(991) 
+        padding-bottom: 0
+    .heading
+        max-width: 580px
+        margin: 0 auto
+    .grid-container
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 15px
+        padding-top: 50px
+        @include media(540) 
+            padding-top: 30px
+            grid-template-columns: repeat(1, 1fr)
+        .career-col
+            background-color: var(--white)
+            padding: 30px 22px
+            text-align: center
+            border: 1px solid #D1D0D0
+            border-radius: 15px
+            .icon
+                padding-bottom: 10px
+                img
+                    width: 44px
+            h6
+                font-size: 24px
+                line-height: 1
+                font-family: "ttrg-bd"
+                padding-bottom: 10px
+            p
+                font-size: 16px
+                line-height: 1.2
+                color: $black
+
+.career-secB
+    .main-container
+        .heading
+            padding-bottom: 60px
+        .career-slider
+            position: relative
+            .swiper-nav
+                display: flex
+                align-items: center
+                width: 63%
+                justify-content: space-between
+                position: absolute
+                top: 50%
+                left: 50%
+                z-index: 2
+                transform: translate(-50%, -50%)
+                @include media(540) 
+                    display: none
+                .career-next, .career-prev
+                    width: 50px
+                    height: 50px
+                    img
+                        height: 100%
+                .career-next
+                    rotate: 180deg
+
+.career-secC
+    @include media(540) 
+        padding-top: 0
+    .container
+        .heading
+            padding-bottom: 50px
+        .summery-detail-content
+            max-width: 900px
+            margin: 0 auto
+            .col
+                --padlr: 0
+                border-radius: 10px
+                transition: .5s ease
+                margin-bottom: 10px
+                &.active
+                    .title
+                        background: var(--gradient-a)
+                        h6
+                            color: $white
+                        .ico
+                            --bgcolor: var(--white)
+                            &::after
+                                transform: scaleY(0)
+                    article
+                        max-height: fit-content
+                        opacity: 1
+                .title
+                    @include flex
+                    overflow: hidden
+                    align-items: center
+                    padding: 15px 20px
+                    cursor: pointer
+                    transition: .5s ease
+                    border: 1px solid #ccc
+                    background-color: #E4E4E4
+                    border-radius: 5px
+                    h6
+                        font-size: 18px
+                        line-height: 1.2
+                        @include font(500) 
+                        flex: 1
+                        color: $black
+                        font-family: $ttrg-bd
+                        padding-right: 1rem
+                        transition: .5s ease
+                        @include media(540)
+                            font-size: 16px
+                        @include media(345)
+                            font-size: 14px
+                    .ico
+                        flex: 0 1 auto
+                        --size: 18px
+                        --border: 2px
+                        --bgcolor: var(--black)
+                        height: var(--size)
+                        width: var(--size)
+                        @include before(var(--bgcolor))
+                        @include after(var(--bgcolor))
+                        &::before,&::after
+                            transition: .5s ease
+                        &::before
+                            top: calc(var(--size) / 2 - var(--border) / 2)
+                            bottom: auto
+                            height: var(--border)
+                            width: 100%
+                        &::after
+                            left: calc(var(--size) / 2)
+                            translate: -50% 0 
+                            right: auto
+                            width: var(--border)
+                            height: 100%
+                article
+                    position: relative
+                    background: $white
+                    border: 1px solid #c1c1c1
+                    border-top: none
+                    max-height: 0
+                    opacity: 0
+                    overflow: hidden
+                    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out
+                    border-radius: 0 0 5px 5px 
+                    .content-desc
+                        padding: 15px 20px 20px
+                        border-bottom: 1px solid #D1D1D1
+                        p,ul,h2,h3,h4,h5,h6
+                            margin-bottom: 16px
+                        *
+                            &:not(button)
+                                color: $text
+                                font-size: 16px
+                                line-height: 1.5
+                        h1,h2,h3,h4,h5,h6,b
+                            color: $black
+                            @include font(500)
+                        ul
+                            padding-left: 20px
+                            li
+                                list-style: none
+                                &::before
+                                    background-color: var(--primary)
+                                @include media(540)
+                                    font-size: 14px
+                                &:not(:last-child)
+                                    margin-bottom: 5px
+                        p
+                            @include media(540)
+                                font-size: 14px
+
+.career-secD
+    .heading
+        margin-bottom: 60px
+        h3
+            font-size: 36px
+            line-height: 1.2
+            @include media(540) 
+                font-size: 26px
+        p
+            font-size: 18px
+            color: $black
+            @include media(540) 
+                font-size: 16px
+    .form
+        max-width: 750px
+        margin-left: auto
+        margin-right: auto
+        --item: 2
+        --inputsize: 52px
+        --image: url(../../public/assets/icon/clip-gray.svg) no-repeat
+        --gaplr: 24px
+        --gaptb: 20px
+        --paddingleftright: 17px
+        @include media(675)
+            --item: 1
+        .form-group
+            background: $white
+            border-radius: 10px
+            &::before,&::after
+                display: none
+            .error_msg
+                right: 10px

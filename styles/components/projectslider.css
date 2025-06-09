@@ -1,0 +1,126 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.project-slider {
+  margin-top: 40px;
+}
+.project-slider .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  position: absolute;
+  right: 3%;
+  top: 10%;
+}
+@media only screen and (max-width: 991px) {
+  .project-slider .swiper-nav {
+    top: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .project-slider .swiper-nav {
+    display: none;
+  }
+}
+.project-slider .swiper-nav button {
+  background: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--black);
+}
+@media only screen and (max-width: 768px) {
+  .project-slider .swiper-nav button {
+    width: 30px;
+    height: 30px;
+  }
+}
+.project-slider .swiper-nav button.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+.project-slider .swiper-nav button svg {
+  vertical-align: middle;
+}
+.project-slider .swiper-slide .item-md {
+  border-radius: 15px;
+  height: 100%;
+}
+.project-slider .swiper-slide .item-md:hover figure img {
+  transform: scale(1.2);
+}
+.project-slider .swiper-slide .item-md::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.95) 100%);
+  border-radius: 15px;
+}
+.project-slider .swiper-slide .item-md figure {
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 540px) {
+  .project-slider .swiper-slide .item-md figure {
+    height: 250px;
+  }
+}
+.project-slider .swiper-slide .item-md figure img {
+  border-radius: 15px;
+  transition: 0.5s ease;
+}
+.project-slider .swiper-slide .item-md figcaption {
+  padding: 0 20px 30px;
+  max-width: 490px;
+}
+.project-slider .swiper-slide .item-md figcaption h6 {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--white);
+  font-family: "ttrg-bd";
+}
+@media only screen and (max-width: 540px) {
+  .project-slider .swiper-slide .item-md figcaption h6 {
+    font-size: 16px;
+  }
+}
+
+.related-slider {
+  margin-top: 40px;
+}
+.related-slider .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+@media only screen and (max-width: 540px) {
+  .related-slider .swiper-nav {
+    display: none;
+  }
+}
+.related-slider .swiper-nav button {
+  background: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--black);
+}
+.related-slider .swiper-nav button.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+.related-slider .swiper-nav button svg {
+  vertical-align: middle;
+}/*# sourceMappingURL=projectslider.css.map */

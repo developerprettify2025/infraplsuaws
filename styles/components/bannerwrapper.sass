@@ -1,0 +1,138 @@
+@import '../_var'
+
+.banner
+    .bg
+        height: 100vh
+    .banner-wrapper
+        .heading
+            &.center
+                text-align: center
+                p
+                    margin: 0 auto
+            &.left
+                text-align: left
+                p
+                    margin-right: auto
+            &.right
+                text-align: right
+                p
+                    margin-left: auto
+            h2
+                font-size: 68px
+                line-height: 1 
+                margin-bottom: 20px
+                color: #fff
+                font-family: $ttrg-bd
+            p
+                max-width: 550px
+                font-size: 24px
+                line-height: 1.2
+                font-family: $ttrg-bd
+                color: $white
+                @include media(540) 
+                    font-family: $ttrg
+
+.banner.contact-banner
+    &::before
+        z-index: 1
+    .bg
+        @include media(540) 
+            height: 60vh
+        video
+            transform: scaleX(-1)
+            filter: grayscale(1)
+        .banner-wrapper
+            .heading
+                h2
+                    @include media(991) 
+                        font-size: 58px
+                    @include media(768) 
+                        font-size: 48px
+                    @include media(540) 
+                        font-size: 30px
+                p
+                    @include media(540) 
+                        font-size: 16px 
+
+.aboutus-banner
+    .bg
+        @include media(540) 
+            height: 60vh
+        .banner-wrapper
+            .heading
+                @include media(540) 
+                    text-align: center
+                h2
+                    @include media(991) 
+                        font-size: 58px
+                    @include media(768) 
+                        font-size: 48px
+                    @include media(540) 
+                        font-size: 30px
+                p
+                    @include media(540) 
+                        font-size: 16px 
+                        font-family: $ttrg
+
+.banner.blog-details-banner
+    .heading
+        h2
+            font-size: 16px
+        p
+            font-size: 35px
+
+.services-banner
+    .bg
+        @include media(540) 
+            height: 60vh
+        .banner-wrapper
+            .heading
+                @include media(540) 
+                    text-align: center
+                h2
+                    @include media(991) 
+                        font-size: 58px
+                    @include media(768) 
+                        font-size: 48px
+                    @include media(540) 
+                        font-size: 30px
+                p
+                    @include media(540) 
+                        font-size: 16px 
+                        font-family: $ttrg
+
+
+.blog-details-banner
+    .bg
+        @include media(540) 
+            height: 60vh
+        .banner-wrapper
+            .heading
+                @include media(540) 
+                    text-align: center
+                p
+                    font-family: $ttrg-bd
+                    @include media(768) 
+                        font-size: 30px
+                    @include media(540) 
+                        font-size: 24px
+
+.career-banner
+    .bg
+        @include media(540) 
+            height: 60vh
+        .banner-wrapper
+            .heading
+                @include media(540) 
+                    text-align: center
+                h2
+                    @include media(991) 
+                        font-size: 58px
+                    @include media(768) 
+                        font-size: 48px
+                    @include media(540) 
+                        font-size: 30px
+                p
+                    @include media(540) 
+                        font-size: 16px 
+                        font-family: $ttrg

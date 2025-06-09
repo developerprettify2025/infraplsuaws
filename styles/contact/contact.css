@@ -1,0 +1,188 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .contact-secA .flex {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-secA .flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.contact-secA .flex .colA, .contact-secA .flex .colB {
+  flex: 1;
+}
+.contact-secA .flex .colA .video-icon {
+  -webkit-mask-image: url(/assets/images/home/about-vector.svg);
+          mask-image: url(/assets/images/home/about-vector.svg);
+  -webkit-mask-size: 70%;
+          mask-size: 70%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  aspect-ratio: 0.9876;
+  line-height: 0;
+}
+@media only screen and (max-width: 991px) {
+  .contact-secA .flex .colA .video-icon {
+    -webkit-mask-size: 80%;
+            mask-size: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-secA .flex .colA .video-icon {
+    -webkit-mask-size: 90%;
+            mask-size: 90%;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex .colA .video-icon {
+    -webkit-mask-size: 100%;
+            mask-size: 100%;
+    height: 90px;
+  }
+}
+.contact-secA .flex .colA .video-icon video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact-secA .flex .colB h3 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex .colB h3 {
+    font-size: 22px;
+  }
+}
+.contact-secA .flex .colB .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px 10px;
+  padding-top: 30px;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex .colB .contact-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 20px;
+  }
+}
+.contact-secA .flex .colB .contact-grid .contact-col {
+  background-color: var(--white);
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #D1D0D0;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex .colB .contact-grid .contact-col {
+    padding: 20px 15px;
+  }
+}
+.contact-secA .flex .colB .contact-grid .contact-col .icon {
+  padding-bottom: 10px;
+}
+.contact-secA .flex .colB .contact-grid .contact-col .icon img {
+  width: 44px;
+}
+.contact-secA .flex .colB .contact-grid .contact-col h6 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: "ttrg-bd";
+  padding-bottom: 10px;
+}
+.contact-secA .flex .colB .contact-grid .contact-col a {
+  display: block;
+  color: var(--text);
+  transition: 0.5s ease;
+}
+.contact-secA .flex .colB .contact-grid .contact-col a.whatsappBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: var(--gradient-a);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "ttrg-bd";
+  margin-top: 5px;
+}
+.contact-secA .flex .colB .contact-grid .contact-col a:hover {
+  color: var(--black);
+}
+.contact-secA .flex .colB .contact-grid .contact-col a img {
+  width: 30px;
+}
+
+.contact-secB {
+  background: var(--gradient-a);
+}
+.contact-secB .heading {
+  max-width: 580px;
+  margin: 0 auto;
+}
+.contact-secB .heading h3 {
+  font-size: 36px;
+  color: var(--white);
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .heading h3 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+.contact-secB .heading p {
+  color: var(--white);
+}
+.contact-secB .form-container {
+  padding-top: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .form-container {
+    padding-top: 30px;
+  }
+}
+.contact-secB .form-container .contact-form {
+  --labelbefore: var(--white);
+  --labelafter: var(--white);
+  --borderbefore: var(--white);
+  --borderafter: var(--white);
+  --color: var(--white);
+}
+.contact-secB .form-container .contact-form .btn-wrap {
+  text-align: center;
+}
+.contact-secB .form-container .contact-form .btn-wrap .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.contact-secC {
+  line-height: 0;
+}
+.contact-secC iframe {
+  filter: grayscale(1);
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC iframe {
+    height: 400px;
+  }
+}/*# sourceMappingURL=contact.css.map */

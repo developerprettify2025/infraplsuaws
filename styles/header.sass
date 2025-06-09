@@ -1,0 +1,728 @@
+@import ./_common
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 5
+    transition: .5s ease
+    height: var(--headerheight)
+    @include after($black)
+    @include media(768)   
+        height: 100px
+    @include media(540)
+        height: 80px
+    &::after
+        bottom: auto
+        height: 0
+        z-index: -1
+        transition: .5s ease
+    .header-wrapper
+        height: 100%
+        display: flex
+        padding: 0 var(--containerfluid)
+        transition: .5s ease
+        --elementcolor: var(--white)
+        --elementhover: var(--primary)
+        gap: 1.5rem
+        @include media(1024)
+            gap: 1rem
+        @include media(991)   
+            align-items: center
+            justify-content: space-between
+        @include media(768)
+            gap: 2rem
+        @include media(540)     
+            gap: 10rem
+        @include media(400)
+            gap: 6rem
+        .colA,.colB, .colC
+            height: 100%
+        .colA
+            a.logo
+                padding: var(--headerpadding) 0
+                height: 100%
+                @include media(540)
+                    padding: 10px 0
+                img
+                    height: 100%
+                    @include media(768)
+                        object-fit: contain
+        .colB
+            flex: 1
+            display: flex
+            align-items: center
+            gap: 47px
+            @include media(991)   
+                justify-content: end
+            @include media(768)
+                display: none
+        ul
+            text-align: center
+            cursor: default
+            user-select: none
+            li
+                display: inline-block
+                vertical-align: middle
+                line-height: 1
+                &.hasDropdown
+                    position: relative
+                    >a
+                        &::after
+                            content: ""
+                            background-image: url(/assets/icon/arrow-down-white.svg)
+                            background-repeat: no-repeat
+                            background-position-x: 100%
+                            background-position-y: 50%
+                            background-size: var(--arrowsize) auto
+                            padding-right: calc(var(--arrowsize) + var(--space))
+                    &:hover
+                        >a
+                            color: var(--elementhover)
+                            position: relative
+                            &::after
+                                transform: rotate(90deg)
+                        .dropdown-menu 
+                            opacity: 1
+                            transform: scale3d(1, 1, 1) 
+                    .dropdown-menu
+                        --triangle: 10px
+                        position: absolute
+                        top: calc(100% + var(--triangle))
+                        left: 50%
+                        translate: -50% 0
+                        transform: perspective(2000px) translate3d(0px, 0px, 50px) rotateX(-90deg) scale3d(0.86, 0.75, 1) translateY(50px)
+                        transform-origin: top
+                        transition: .4s ease
+                        opacity: 0
+                        width: 100%
+                        min-width: fit-content
+                        &::before
+                            content: ''
+                            display: block
+                            position: absolute
+                            bottom: calc(100% - (var(--triangle) / 2))
+                            left: 50%
+                            translate: -50% 0
+                            width: var(--triangle)
+                            height: var(--triangle)
+                            background: #E3E3E3
+                            transform: rotate(45deg)
+                            z-index: -1
+                        ul
+                            display: grid
+                            grid-template-columns: repeat(2, 1fr)
+                            column-gap: 20px 
+                            background: #fff
+                            padding: 16px 12px
+                            box-shadow: rgb(0 0 0 / 1%) -2px 6px 2px 3px
+                            border-radius: 5px
+                            text-align: left
+                            white-space: nowrap
+                            width: 500px
+                            li
+                                display: block
+                                &:not(:last-child)
+                                    margin-right: 0
+                                    margin-bottom: 2px
+                                a
+                                    font-size: 14px
+                                    display: flex
+                                    align-items: center
+                                    gap: 5px
+                                    color: $black
+                                    padding: 10px 14px
+                                    border-radius: 5px
+                                    overflow: hidden
+                                    &:hover
+                                        background: var(--gradient-a)
+                                        color: $white
+                                        img
+                                            filter: invert(1)
+                                        &::before
+                                            opacity: 1
+                                    img
+                                        width: 20px
+                                        transition: .5s ease
+                                        object-fit: cover
+                                    span
+                                        display: block
+                                        width: 24px
+                                        line-height: 0
+                a
+                    &:not(.btn)
+                        color: var(--elementcolor)
+                        @include font(500)
+                        &:hover
+                            color: var(--elementhover)
+                    .svg
+                        width: 23px
+                        height: 23px
+                .ham-btn
+                    --width: 35px
+                    --height: 2px
+                    span
+                        display: block
+                        width: var(--width)
+                        height: var(--height)
+                        background-color: #fff
+                        transition: .5s ease
+                        &:not(:last-child)
+                            margin-bottom: 7px
+                    &:hover
+                        span
+                            background-color: var(--elementhover)
+                    @include media(540)
+                        width: 35px
+        .nav-a
+            flex: 1
+            @include media(991)   
+                display: none
+            li
+                &:not(:last-child)
+                    margin-right: 40px
+
+        .colC
+            display: flex
+            flex: 0 1 auto
+            align-items: center
+        .nav-b
+            li
+                &:first-child
+                    border-right: 1px solid $white
+                    padding-right: 15px
+                    @include media(768)     
+                        display: none
+                    a
+                        display: flex
+                        align-items: center
+                        gap: 8px
+                @include media(540)
+                    &:not(:last-child)
+                        display: none
+                &:not(:last-child)
+                    margin-right: 17px
+header
+    &.header-fixed
+        @include media(991)
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    &.header-fixed,&.header-fit
+        transition: .5s ease
+        --headerpadding: 14px
+        height: var(--headerfixed)
+        @include media(768)
+            height: 50px
+        &::after
+            height: 100%
+    &.header-fit
+        transition: 0s
+        &::after
+            transition: none
+        .header-wrapper
+            .colA
+                .logo
+                    transition: none !important
+    &.header-shadow
+        box-shadow: 0px 2px 8px 0px #63636333
+
+
+footer
+    @include media(540)
+        margin-bottom: var(--footerstrip)
+    .call-to-action
+        width: 100%
+        background: var(--gradient-a)
+        padding: 15px 25px
+        align-items: center
+        @include media(991)
+            flex-direction: column
+            gap: 25px
+        @include media(540) 
+            padding: 35px
+        .colA
+            flex: 1
+            display: flex
+            align-items: center
+            @include media(540)     
+                flex-direction: column
+                width: 100%
+                align-items: start
+                gap: 10px
+            .action
+                display: flex
+                gap: 10px
+                padding: 0 30px
+                @include media(768) 
+                    gap: 6px
+                    padding: 0 10px
+                    flex: 1
+                @include media(540)     
+                    gap: 12px
+                &:first-child
+                    padding-left: 0
+                    @include media(540) 
+                        padding-left: 10px
+                &:not(:last-child)
+                    border-right: 1px solid $white
+                    @include media(540)     
+                        border-right: none
+                .contact
+                    h6
+                        font-family: $ttrg-bd
+                        font-size: 18px
+                        color: $white
+                        line-height: 1
+                        @include media(768) 
+                            font-size: 16px
+                    a
+                        color: $white
+        .colB
+            flex: 0 1 auto
+            display: flex
+            align-items: center
+            gap: 15px
+    .main-footer
+        padding: 50px 25px 80px
+        display: flex
+        gap: 30px
+        @include media(991)
+            flex-direction: column
+        @include media(540)     
+            padding: 30px 15px 50px
+        .colA
+            flex: 0 1 auto
+            @include media(991)
+                margin: 0 auto 20px
+            @include media(540)     
+                margin: 0 auto
+            img
+                @include media(991)
+                    height: 100%
+                    object-fit: contain
+        .colB
+            flex: 1
+            display: flex
+            gap: 20px
+            padding: 0 40px
+            @include media(991)
+                padding: 0 20px
+            @include media(540)     
+                flex-wrap: wrap
+                padding: 0
+                gap: 10px
+            .list
+                flex: 1
+                @include media(540)     
+                    flex: 0 1 46%
+                h6
+                    font-size: 18px
+                    line-height: 1.2
+                    font-family: $ttrg-bd
+                    margin-bottom: 15px
+                ul
+                    li
+                        a
+                            font-size: 16px
+                            color: $text
+                            transition: .5s ease
+                            padding-bottom: 5px
+                            &:hover
+                                color: $black
+                                padding-left: 5px
+                &:last-child
+                    flex: 0 1 40%
+                    @include media(540)     
+                        flex: 1
+                        margin-top: 20px
+                    a
+                        display: flex
+                        gap: 5px
+                        svg
+                            flex: 0 1 50px
+
+        .colC
+            flex: 0 1 auto
+            .social-icons
+                display: flex
+                align-items: center
+                gap: 30px
+                @include media(991)
+                    justify-content: center
+
+    .bottom-footer
+        padding: 30px 25px 40px
+        border-top: 1px solid #CCCCCC
+        display: flex
+        justify-content: space-between
+        width: 100%
+        align-items: center
+        @include media(540)     
+            flex-direction: column
+            gap: 5px
+        .pret
+            a
+                display: flex
+                align-items: center
+                color: $text
+                img
+                    width: 80px
+                    padding-left: 10px
+
+// footer
+//     background: linear-gradient(270deg, #000000 0%, #464646 100%)
+//     .footer-wrapper
+//         padding: 90px 0 82px
+//         position: relative
+//         z-index: 1
+//         @include media(768)
+//             padding: 50px 0
+//         .flex
+//             @include media(768)
+//                 flex-direction: column
+//                 align-items: center
+//                 justify-content: center
+//                 gap: 35px
+//             h6
+//                 color: $white
+//                 font-size: 18px
+//             .col-md
+//                 ul
+//                     li
+//                         &:not(:last-child)
+//                             margin-bottom: 3px
+//                         a
+//                             display: block
+//                             color: $white
+//                             padding: 3px 0
+//                             &:hover
+//                                 color: $primary
+//             .colA
+//                 flex: 0 1 auto
+//                 @include media(768)
+//                     width: 100%
+//                 .logo
+//                     margin-bottom: 35px
+//                     width: 274px
+//                     img
+//                         width: 100%
+//                 ul
+//                     li
+//                         &:not(:last-child)
+//                             margin-bottom: 1rem
+//                         a
+//                             display: inline-flex
+//                             align-items: center
+//                             color: $white
+//                             gap: 18px
+//                             &:hover
+//                                 color: $primary
+//             .colB
+//                 flex: 1
+//                 display: flex
+//                 gap: 8rem
+//                 padding-left: 10rem
+//                 padding-right: 2rem
+//                 @include media(1024)   
+//                     gap: 3rem
+//                     padding-left: 4rem
+//                 @include media(768)
+//                     padding: 0
+//                     width: 100%
+//                     justify-content: start
+//                     gap: 8rem
+//                 @include media(540)
+//                     justify-content: space-between
+//                     gap: 0  
+//             .colC
+//                 flex: 0 1 auto
+//                 @include media(991)
+//                     margin-top: 50px
+//                 @include media(768)
+//                     width: 100%
+//                     text-align: left
+//                     margin-top: 0
+//                 .social-icons
+//                     margin-bottom: 38px
+//                     @include media(768)
+//                         margin-bottom: 20px
+//                     a
+//                         display: inline-flex
+//                         vertical-align: middle
+//                         align-items: center
+//                         justify-content: center
+//                         height: 40px
+//                         width: 40px
+//                         border-radius: 50%
+//                         line-height: 0
+//                         overflow: hidden
+//                         @include before($gradient-a)
+//                         &::before
+//                             border-radius: 50%
+//                             transform: scale(1.5)
+//                             z-index: -1
+//                             opacity: 0
+//                             transition: .2s ease
+//                         &:not(:last-child)
+//                             margin-right: 10px
+//                         svg
+//                             width: 24px
+//                             height: auto
+//                         &:hover
+//                             &::before
+//                                 transition: .5s ease
+//                                 opacity: 1
+//                                 transform: scale(1)
+//                 .btn-wrap
+//                     >*
+//                         &:not(:last-child)
+//                             margin-right: 10px
+//     .bottom-footer
+//         border-top: 1px solid #DCD6D633
+//         padding: 22px 0 36px
+//         position: relative
+//         z-index: 1
+//         @include media(675)
+//             margin-bottom: var(--footerstrip)
+//         .flex
+//             gap: 2rem
+//             @include media(540)     
+//                 gap: 0
+//                 flex-direction: column
+//                 align-items: center
+//             p
+//                 color: #9C9A9A
+//                 font-size: 14px
+//                 line-height: 24px
+//                 @include media(520)
+//                     font-size: 12px
+//                     color: rgb(256 256 256 / .6)
+//                 span
+//                     display: inline-block
+//                     margin-left: 4px
+//                 img
+//                     display: inline-block
+//                     vertical-align: middle
+//                     margin-left: 4px
+//                     width: 60px
+//                 &:first-child
+//                     flex: 1
+.ham-pop
+    right: 0
+    max-width: 480px
+    background: linear-gradient(180deg, #d4f9f9 2%, #fff 89%)
+    transform: translateX(100%)
+    transition: .5s ease
+    &.is-open
+        transform: translateX(0%)
+    .close
+        path
+            stroke: $text !important
+            stroke-width: 2 !important
+    .model-body
+        padding: 75px 40px 30px
+        height: 100%
+        overflow-y: auto
+        display: flex
+        flex-direction: column
+        background: url(/assets/icon/infra-icon.svg) no-repeat
+        background-position-x: 90%
+        background-position-y: 80%
+        background-size: 100px
+        @include scrollbar(6px,$white,#5e5e5e,8px)
+        @include media(520)
+            padding: 40px 20px
+        .ico
+            max-width: 70px
+            margin-bottom: 55px
+            line-height: 0
+            img,svg
+                width: 100%
+                height: auto
+        .nav-list
+            flex: 1
+            >li
+                // &:not(:last-child)
+                //     margin-bottom: 22px
+                    @include media(1366)
+                        margin-bottom: 20px
+                >a
+                    font-size: 28px
+                    line-height: 1.06
+                    padding: 10px 0  
+                    color: $black
+                    font-family: $ttrg-bd
+                    display: block
+                    @include font(500)
+                    @include media(1366)
+                        font-size: 28px
+                    @include media(675)
+                        font-size: 24px
+                    &:hover
+                        color: #1a9aa9
+                        padding-left: 5px
+                        
+        .bottom-list
+            border-top: 1px solid #ccc
+            margin-top: 2rem
+            padding-top: 1rem
+            display: flex
+            align-items: center
+            gap: 1rem
+            .social-icons
+                a
+                    display: inline-flex
+                    vertical-align: middle
+                    align-items: center
+                    justify-content: center
+                    height: 40px
+                    width: 40px
+                    border-radius: 50%
+                    line-height: 0
+                    overflow: hidden
+                    @include before($gradient-a)
+                    color: $text
+                    &::before
+                        border-radius: 50%
+                        transform: scale(1.5)
+                        z-index: -1
+                        opacity: 0
+                        transition: .2s ease
+                    &:not(:last-child)
+                        margin-right: 4px
+                    svg
+                        width: 24px
+                        height: 24px
+                        path
+                            transition: none
+                            &[stroke],&[fill="none"]
+                                stroke: currentColor
+                            &[fill]
+                                fill: currentColor
+                    &:hover
+                        color: $white
+                        &::before
+                            transition: .5s ease
+                            opacity: 1
+                            transform: scale(1)
+
+.enquire-pop
+    right: 0
+    transform: translateX(100%)
+    transition: .5s ease
+    background: $gradient-e
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        padding: 60px 35px 30px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar(3px,$white,#5e5e5e,8px)
+        @include media(675)
+            padding: 70px 20px 30px
+        .title
+            text-align: center
+            margin-bottom: 2rem
+            h4
+                font-size: 32px
+                color: $black
+                font-family: $ttrg-bd
+                @include font(500)
+            p
+                color: $text
+                margin-top: 10px
+                font-size: 14px
+                line-height: 20px
+                max-width: 317px
+                margin-left: auto
+                margin-right: auto
+                @include media(675)
+                    font-size: 14px
+                    max-width: 300px
+        .form
+            --gaptb: 15px
+
+.video-pop
+    left: 0
+    right: 0
+    background: #0000007a
+    z-index: 9
+    max-width: 100%
+    transform: translateY(100%)
+    transition: .5s ease
+    &.is-open
+        transform: translateY(0%)
+    .close-video
+        position: absolute
+        bottom: calc(100% + 20px)
+        top: auto
+        right: -40px
+        height: 50px
+        width: 50px
+        border-radius: 50%
+        background: $secondary
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: .5s ease
+        @include media(675)
+            right: 0
+        &:hover
+            background: $primary
+        svg
+            height: 35%
+            width: 35%
+        path
+            stroke-width: 2
+            stroke: $white
+    .model-body
+        position: absolute
+        top: 50%
+        left: 50%
+        translate: -50% -50%
+        width: 100%
+        max-width: 50%
+        @include media(675)
+            max-width: 95%
+        iframe
+            width: 100%
+            aspect-ratio: 1.9
+            border: 2px solid $white
+            background: $white
+.footer-strip
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 4
+    background: var(--gradient-a)
+    display: none
+    @include media(540)
+        display: block
+    ul
+        @include flex
+        li
+            flex: 1
+            &:not(:last-child)
+                border-right: 1px solid rgb(256 256 256 / 10%)
+            a
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding: 10px
+                gap: 5px
+                color: $white
+                font-size: 14px
+                height: var(--footerstrip)
+                svg
+                    width: 20px
+                    height: 20px
+                    &[stroke]
+                        stroke: $white
+                    &[fill]
+                        fill: $white
+                    path
+                        &[stroke]
+                            stroke: $white
+                        &[fill]
+                            fill: $white
